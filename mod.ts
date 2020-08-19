@@ -9,7 +9,7 @@
  * | macOS   | `$HOME`/Library/Preferences           | /Users/justjavac/Library/Preferences |
  * | Windows | `{FOLDERID_RoamingAppData}`           | C:\Users\justjavac\AppData\Roaming   |
  */
-export default function config_dir(): string | null {
+export default function configDir(): string | null {
   switch (Deno.build.os) {
     case "linux": {
       const xdg = Deno.env.get("XDG_CONFIG_HOME");
